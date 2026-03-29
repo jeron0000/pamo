@@ -1,0 +1,75 @@
+body{
+    margin:0;
+    height:100vh;
+    background: linear-gradient(135deg,#0f0f0f,#1a1a2e,#16213e);
+    font-family: "Segoe UI", sans-serif;
+    color:white;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.container{
+    text-align:center;
+    width:800px;
+}
+
+.title{
+    font-size:18px;
+    letter-spacing:4px;
+    margin-bottom:50px;
+    opacity:0.5;
+}
+
+/* smoother text */
+#lyrics{
+    font-size:42px;
+    font-weight:600;
+    line-height:1.8;
+    min-height:120px;
+
+    letter-spacing:1px;
+
+    text-shadow:
+        0 0 8px rgba(255,255,255,0.25),
+        0 0 18px rgba(255,255,255,0.15);
+}
+
+/* smoother entrance */
+.line{
+    opacity:0;
+    transform:translateY(30px);
+    animation:smoothFade 1.2s ease forwards;
+}
+
+/* smoother animation */
+@keyframes smoothFade{
+    0%{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    100%{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* cursor */
+.cursor{
+    display:inline-block;
+    width:3px;
+    height:1em;
+    background:white;
+    margin-left:6px;
+    border-radius:2px;
+
+    animation:blink 1.2s ease infinite;
+}
+
+@keyframes blink{
+    0%{opacity:1;}
+    50%{opacity:0;}
+    100%{opacity:1;}
+}
